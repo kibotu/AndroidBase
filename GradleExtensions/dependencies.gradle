@@ -5,14 +5,14 @@ ext {
     minSdkVer = 15
     targetSdkVer = 25
 
-    kotlinVersion = '1.0.6'
+    kotlinVersion = '1.1.0'
     supportLibVer = '25.1.1'
     playServicesVer = '10.0.1'
 }
 
 ext.plugin = [
-        gradleBuildTools       : 'com.android.tools.build:gradle:2.3.0-beta3',
-        gradleRetroLambda      : 'me.tatarka:gradle-retrolambda:3.4.0',
+        gradleBuildTools       : 'com.android.tools.build:gradle:2.3.0',
+        gradleRetroLambda      : 'me.tatarka:gradle-retrolambda:3.5.0',
         lombok                 : 'me.tatarka.retrolambda.projectlombok:lombok.ast:0.2.3.a2',
         androidApt             : 'com.neenbedankt.gradle.plugins:android-apt:1.8',
         hockeyApp              : 'com.github.kibotu:gradle-hockeyapp-plugin:3.4.5',
@@ -61,7 +61,7 @@ ext.libs = [
         permissionDispatcherProcessor: 'com.github.hotchemi:permissionsdispatcher-processor:2.3.0',
         parceler                     : 'org.parceler:parceler-api:1.1.6',
         parcelerProcessor            : 'org.parceler:parceler:1.1.6',
-        joda                         : 'net.danlew:android.joda:2.9.5',
+        joda                         : 'net.danlew:android.joda:2.9.7',
         smartLocation                : 'io.nlopez.smartlocation:library:3.2.9',
         materialdrawer               : 'com.mikepenz:materialdrawer:5.8.1',
         markdownview                 : 'com.mukesh:markdownview:1.0.0',
@@ -95,7 +95,7 @@ ext.libs = [
         nineoldandroids              : 'com.nineoldandroids:library:2.4.0',
         realm                        : 'io.realm:realm:0.69.0',
         realmAnnotationsProcessor    : 'io.realm:realm-annotations-processor:0.69.0',
-        pubnub                       : 'com.pubnub:pubnub:4.2.0',
+        pubnubGson                   : 'com.pubnub:pubnub-gson:4.5.0',
         wowoViewPager                : 'com.nightonke:wowoviewpager:1.0.2',
         numberPicker                 : 'com.shawnlin:number-picker:1.0.1',
         adjust                       : 'com.adjust.sdk:adjust-android:4.10.2',
@@ -106,17 +106,18 @@ ext.libs = [
 
 ext.testLibs = [
         junit                     : 'junit:junit:4.12',
-        robolectric               : 'org.robolectric:robolectric:3.2.1',
-        robolectricShadowsMultidex: 'org.robolectric:shadows-multidex:3.2.1',
-        robolectricResources      : 'org.robolectric:robolectric-resources:3.2.1',
-        robolectricUtils          : 'org.robolectric:robolectric-utils:3.2.1',
-        robolectricAnnotations    : 'org.robolectric:robolectric-annotations:3.2.1',
-        robolectricShadowsCore    : 'org.robolectric:shadows-core:3.2.1',
+        robolectric               : 'org.robolectric:robolectric:3.3',
+        robolectricShadowsMultidex: 'org.robolectric:shadows-multidex:3.3',
+        robolectricResources      : 'org.robolectric:robolectric-resources:3.3',
+        robolectricUtils          : 'org.robolectric:robolectric-utils:3.3',
+        robolectricAnnotations    : 'org.robolectric:robolectric-annotations:3.3',
+        robolectricShadowsCore    : 'org.robolectric:shadows-core:3.3',
         khronos                   : 'org.khronos:opengl-api:gl1.1-android-2.1_r1',
         spek                      : 'org.jetbrains.spek:spek-api:1.1.0-beta3',
-        mockito                   : 'com.nhaarman:mockito-kotlin:1.1.0',
+        mockito                   : "com.nhaarman:mockito-kotlin:$kotlinVersion",
         powermock                 : 'org.powermock:powermock:1.6.6',
-        truth                     : 'com.google.truth:truth:0.31'
+        truth                     : 'com.google.truth:truth:0.31',
+        jodaTime                  : 'joda-time:joda-time:2.9.7'
 ]
 
 ext.androidTestLibs = [
